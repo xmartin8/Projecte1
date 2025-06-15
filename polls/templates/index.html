@@ -1,0 +1,8 @@
+<h1>Enquestes</h1>
+<ul>
+  {% for q in questions %}
+    <li><a href="{% url 'detail' q.id %}">{{ q.question_text }}</a></li>
+  {% empty %}
+    <li>No hi ha preguntes.</li>
+  {% endfor %}
+</ul>
